@@ -13,6 +13,7 @@ const christmasStyles = `
     background: #2F7336;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #AA3A38, #2F7336);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #AA3A38, #2F7336); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100%;
   }
 
   html::after {
@@ -24,7 +25,7 @@ const christmasStyles = `
     position: absolute;
     top: 0;
     left: 0;
-    animation: 3s infinite alternate blink;
+    animation: 0.5s infinite alternate blink;
   }
 
   body {
