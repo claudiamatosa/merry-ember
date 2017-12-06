@@ -53,11 +53,11 @@ const content = {
 
   body: `
     <div class="snowflakes" aria-hidden="true">
-      ${Array(10.fill(`
+      ${Array(10).fill(`
         <div class="snowflake">
           ❄
         </div>
-      `)).join('')}
+      `).join('')}
     </div>
   `
 };
