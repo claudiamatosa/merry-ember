@@ -1,7 +1,7 @@
 /* eslint-env node */
 'use strict';
 
-const christmasStyles = `
+const styles = `
   @keyframes blink {
     0% { opacity: 1.0; }
     50% { opacity: 0.0; }
@@ -48,58 +48,21 @@ const christmasStyles = `
   }
 `;
 
+const content = {
+  head: `<style type="text/css">${styles}</style>`,
+
+  body: `
+    <div class="snowflakes" aria-hidden="true">
+      ${Array(10.fill(`
+        <div class="snowflake">
+          ❄
+        </div>
+      `)).join('')}
+    </div>
+  `
+};
+
 module.exports = {
   name: 'merry-ember',
-
-  contentFor: function (type, config) {
-    if (type === 'head') {
-      return `<style type="text/css">${christmasStyles}</style>`;
-    }
-
-    if (type === 'body') {
-      return `
-        <div class="snowflakes" aria-hidden="true">
-          <div class="snowflake">
-            ❄
-          </div>
-
-          <div class="snowflake">
-            ❄
-          </div>
-
-          <div class="snowflake">
-            ❄
-          </div>
-
-          <div class="snowflake">
-            ❄
-          </div>
-
-          <div class="snowflake">
-            ❄
-          </div>
-
-          <div class="snowflake">
-            ❄
-          </div>
-
-          <div class="snowflake">
-            ❄
-          </div>
-
-          <div class="snowflake">
-            ❄
-          </div>
-
-          <div class="snowflake">
-            ❄
-          </div>
-
-          <div class="snowflake">
-            ❄
-          </div>
-        </div>
-      `;
-    }
-  }
+  contentFor: (type, config) => content[type]
 };
