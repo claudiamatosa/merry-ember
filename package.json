@@ -11,7 +11,10 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/claudiamatosa/merry-ember.git"
+  },
   "scripts": {
     "build": "ember build",
     "start": "ember server",
