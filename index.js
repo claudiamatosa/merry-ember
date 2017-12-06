@@ -8,14 +8,14 @@ const christmasStyles = `
     100% { opacity: 1.0; }
   }
 
-  body {
+  html {
     /* https://uigradients.com/#Christmas */
     background: #2F7336;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #AA3A38, #2F7336);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #AA3A38, #2F7336); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
-  body::after {
+  html::after {
     background-color: rgba(255, 255, 255, 0.8);
     display: block;
     content: '';
@@ -25,6 +25,10 @@ const christmasStyles = `
     top: 0;
     left: 0;
     animation: 3s infinite alternate blink;
+  }
+
+  body {
+    background: none;
   }
 `;
 
