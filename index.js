@@ -29,7 +29,7 @@ const christmasStyles = `
   }
 
   body {
-    background: none;
+    background: none !important;
   }
 `;
 
