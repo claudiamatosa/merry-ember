@@ -64,5 +64,5 @@ const content = {
 
 module.exports = {
   name: 'merry-ember',
-  contentFor: (type, config) => content[type]
+  contentFor: type => content[type]
 };
